@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ec46f02-fa48-4919-a6d4-3ffda207bb74" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/mireAppParser.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mireAppParser.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsonLoader/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/jsonLoader/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsonLoader/jsonLoader.py" beforeDir="false" afterPath="$PROJECT_DIR$/jsonLoader/jsonLoader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parser/RE_ValueAnalyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/parser/RE_ValueAnalyzer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parser/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/parser/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parser/cellValueAnalyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/parser/cellValueAnalyzer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parser/weekDictCreator.py" beforeDir="false" afterPath="$PROJECT_DIR$/parser/weekDictCreator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parser/RE_ValueAnalyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/parserPack/RE_ValueAnalyzer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parser/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/parserPack/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parser/cellValueAnalyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/parserPack/cellValueAnalyzer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parser/weekDictCreator.py" beforeDir="false" afterPath="$PROJECT_DIR$/parserPack/weekDictCreator.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/mireAppParser$main.coverage" NAME="main Coverage Results" MODIFIED="1536702765806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/mireAppParser$main.coverage" NAME="main Coverage Results" MODIFIED="1536704891313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/mireAppParser$jsonLoader.coverage" NAME="jsonLoader Coverage Results" MODIFIED="1536700858626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/jsonLoader" />
   </component>
   <component name="FUSProjectUsageTrigger">
@@ -60,21 +56,23 @@
     <session id="-1494172300">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.28" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="15" />
-          <entry key="py" value="818" />
+          <entry key="py" value="954" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="15" />
-          <entry key="Python" value="818" />
+          <entry key="Python" value="954" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -92,50 +90,48 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parser/RE_ValueAnalyzer.py">
+        <entry file="file://$PROJECT_DIR$/parserPack/RE_ValueAnalyzer.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parser/cellValueAnalyzer.py">
+        <entry file="file://$PROJECT_DIR$/parserPack/cellValueAnalyzer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-382">
-              <caret column="1" selection-start-column="1" selection-end-column="1" />
+            <state>
+              <caret column="32" selection-start-column="32" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parser/weekDictCreator.py">
+        <entry file="file://$PROJECT_DIR$/parserPack/weekDictCreator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+            <state>
+              <caret column="53" selection-start-column="53" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
+        <entry file="file://$PROJECT_DIR$/parserPack/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#34#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="73" selection-start-column="73" selection-end-column="73" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/parser/__init__.py">
+        <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="595">
+              <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
               <folding>
-                <element signature="e#0#69#0" expanded="true" />
+                <element signature="e#0#34#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -160,11 +156,15 @@
         <option value="$PROJECT_DIR$/jsonLoader/jsonloader.py" />
         <option value="$PROJECT_DIR$/jsonLoader/__init__.py" />
         <option value="$PROJECT_DIR$/jsonLoader/jsonLoader.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/parser/cellValueAnalyzer.py" />
         <option value="$PROJECT_DIR$/parser/RE_ValueAnalyzer.py" />
         <option value="$PROJECT_DIR$/parser/__init__.py" />
         <option value="$PROJECT_DIR$/parser/weekDictCreator.py" />
+        <option value="$PROJECT_DIR$/parserPack/RE_ValueAnalyzer.py" />
+        <option value="$PROJECT_DIR$/parserPack/__init__.py" />
+        <option value="$PROJECT_DIR$/parserPack/weekDictCreator.py" />
+        <option value="$PROJECT_DIR$/parserPack/cellValueAnalyzer.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -202,7 +202,7 @@
             <path>
               <item name="mireAppParser" type="b2602c69:ProjectViewProjectNode" />
               <item name="mireAppParser" type="462c0819:PsiDirectoryNode" />
-              <item name="parser" type="462c0819:PsiDirectoryNode" />
+              <item name="parserPack" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -300,10 +300,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2585288" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.26119402" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="1" />
@@ -313,7 +312,7 @@
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="8" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -347,42 +346,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parser/weekDictCreator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parser/RE_ValueAnalyzer.py">
+    <entry file="file://$PROJECT_DIR$/parserPack/RE_ValueAnalyzer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parser/cellValueAnalyzer.py">
+    <entry file="file://$PROJECT_DIR$/parserPack/cellValueAnalyzer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-382">
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        <state>
+          <caret column="32" selection-start-column="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parserPack/weekDictCreator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="53" selection-start-column="53" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parserPack/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="73" selection-start-column="73" selection-end-column="73" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+        <state relative-caret-position="595">
+          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parser/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#69#0" expanded="true" />
           </folding>
         </state>
       </provider>

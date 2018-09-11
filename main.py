@@ -3,8 +3,9 @@ import re
 import json
 import os
 from jsonLoader import jsonLoader
-from parser import usualWeekHandler
-#import parser
+from parserPack import usualWeekHandler
+
+
 
 def main():
     # Шаблон на имя группы
@@ -30,3 +31,6 @@ def main():
                 with open('C:/Test/json/' + groupName[0] + '.json', 'w') as json_file:
                     json.dump(schedule, json_file, ensure_ascii=False)
     # jsonLoader.uploadJson()
+
+
+main()

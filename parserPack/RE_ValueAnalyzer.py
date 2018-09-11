@@ -1,5 +1,5 @@
 # парсер значения
-#import re
+import re
 
 
 

@@ -1,4 +1,4 @@
-#from parser import RE_ValueAnalyzer
+from parserPack.RE_ValueAnalyzer import valueParser
 
 
 # Обработчик значения
@@ -51,14 +51,14 @@ def valueHandler(sheet, cell):
         else:
             valueParseArgs1[3] = roomValue
         if valueParseArgs1[0] or valueParseArgs1[1] or valueParseArgs1[2] or valueParseArgs1[3]:
-            lessons.append(RE_ValueAnalyzer.valueParser(valueParseArgs1[0],
+            lessons.append(valueParser(valueParseArgs1[0],
                                                         valueParseArgs1[1],
                                                         valueParseArgs1[2],
                                                         valueParseArgs1[3],
                                                         sheet.cell(column=cell.col_idx - 4,
                                                                    row=cell.row + cellRowCorrection).value))
         if valueParseArgs2[0] or valueParseArgs2[1] or valueParseArgs2[2] or valueParseArgs2[3]:
-            lessons.append(RE_ValueAnalyzer.valueParser(valueParseArgs2[0],
+            lessons.append(valueParser(valueParseArgs2[0],
                                                         valueParseArgs2[1],
                                                         valueParseArgs2[2],
                                                         valueParseArgs2[3],

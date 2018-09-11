@@ -1,4 +1,4 @@
-#import parser
+from parserPack.cellValueAnalyzer import valueHandler
 
 # Обработчик пар
 def usualPairHandler(sheet, cell):
