@@ -23,5 +23,12 @@ def usualWeekHandler(sheet, cell, num):
     }
     return days
 
+
+def usualDictCreator(sheet, cell, evenCell):
+    schedule = {
+        "odd": usualWeekHandler(sheet, cell, 0),
+        "even": usualWeekHandler(sheet, evenCell, 1)
+    }
+    return schedule
 # добавить алгоритмы прохода по вечеркам и маге
 # ...
