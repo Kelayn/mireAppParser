@@ -8,13 +8,14 @@ def other(dirName, listOfFiles):
     groupNameTmplt = re.compile(r'(?:[а-яё]{4}[-]\d\d[-]\d\d){1}', re.I)
     for file in listOfFiles:
         wb = load_workbook(dirName + '\\' +file)
+        print(file)
+        input()
         sheet = wb.worksheets[0]
         # итерации по колонкам файлам
         for col in sheet.iter_cols(min_row=2, max_row=2):
             cell = col[0]  # Присваивание ячейки
             if cell.value and groupNameTmplt.findall(str(cell.value)):  # Если ячейка не пустая и в ней подходящее значение
                 groupName = groupNameTmplt.findall(str(cell.value))
-                print(groupName[0])
                 cell.row += 2
                 cell = sheet[cell.column + str(cell.row)]
                 evenCell = sheet[cell.column + str(cell.row)]

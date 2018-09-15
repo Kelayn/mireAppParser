@@ -2,67 +2,71 @@ from parserPack.RE_ValueAnalyzer import valueParser
 
 
 # Обработчик значения
-def valueHandler(sheet, cell):
-    cellRowCorrection = 0
-    if cell.row % 2 != 0:
-        cellRowCorrection -= 1
-
-    if cell.value:
-        cellValue = sheet[cell.column + str(cell.row)].value
-        typeValue = sheet.cell(column=cell.col_idx + 1, row=cell.row).value
-        teacherValue = sheet.cell(column=cell.col_idx + 2, row=cell.row).value
-        roomValue = sheet.cell(column=cell.col_idx + 3, row=cell.row).value
-
-        newLine = -1
-        newTpLine = -1
-        newTcLine = -1
-        newRmLine = -1
-
-        if cellValue: newLine = str(cellValue).find('\n')
-        if typeValue: newTpLine = str(typeValue).find('\n')
-        if teacherValue: newTcLine = str(teacherValue).find('\n')
-        if roomValue: newRmLine = str(roomValue).find('\n')
-
+def valueHandler(sheet, locCell, pairNum):
+    if sheet.cell(column=locCell.col_idx, row=locCell.row-1).value == "Военная\nподготовка":
+        locCell = sheet.cell(column=locCell.col_idx, row=locCell.row-1)
+    if locCell.value:
         lessons = []
-        valueParseArgs1 = [None, None, None, None]
-        valueParseArgs2 = [None, None, None, None]
+        cellValue = sheet[locCell.column + str(locCell.row)].value
+        if cellValue != "*Занятия по адресу:" and cellValue != "ул. М.Пироговская, д.1" \
+                and cellValue != "Пр-т Вернадского, 86" and cellValue != "Занятия по адресу:"\
+                and cellValue != "…………………." and cellValue != "…………………" and cellValue != "……………………":
+            typeValue = sheet.cell(column=locCell.col_idx + 1, row=locCell.row).value
+            teacherValue = sheet.cell(column=locCell.col_idx + 2, row=locCell.row).value
+            roomValue = sheet.cell(column=locCell.col_idx + 3, row=locCell.row).value
 
-        if newLine != -1 and cellValue:
-            valueParseArgs1[0] = cellValue[:newLine]
-            valueParseArgs2[0] = cellValue[newLine + 1:]
-        else:
-            valueParseArgs1[0] = cellValue
-        if newTpLine != -1:
-            valueParseArgs1[1] = typeValue[:newTpLine]
-            valueParseArgs2[1] = typeValue[newTpLine + 1:]
-        else:
-            valueParseArgs1[1] = typeValue
-        if newTcLine != -1:
-            valueParseArgs1[2] = teacherValue[:newTcLine]
-            valueParseArgs2[2] = teacherValue[newTcLine + 1:]
-        else:
-            valueParseArgs1[2] = teacherValue
-        if newRmLine != -1:
-            if newLine == -1:
-                valueParseArgs1[3] = roomValue[:newRmLine] + roomValue[newRmLine + 1:]
+            newLine = -1
+            newTpLine = -1
+            newTcLine = -1
+            newRmLine = -1
+
+            if cellValue: newLine = str(cellValue).find('\n')
+            if typeValue: newTpLine = str(typeValue).find('\n')
+            if teacherValue: newTcLine = str(teacherValue).find('\n')
+            if roomValue: newRmLine = str(roomValue).find('\n')
+
+            valueParseArgs1 = [None, None, None, None]
+            valueParseArgs2 = [None, None, None, None]
+
+            if newLine != -1 and cellValue:
+                valueParseArgs1[0] = cellValue[:newLine]
+                valueParseArgs2[0] = cellValue[newLine + 1:]
             else:
-                valueParseArgs1[3] = roomValue[:newRmLine]
-                valueParseArgs2[3] = roomValue[newRmLine + 1:]
-        else:
-            valueParseArgs1[3] = roomValue
-        if valueParseArgs1[0] or valueParseArgs1[1] or valueParseArgs1[2] or valueParseArgs1[3]:
-            lessons.append(valueParser(valueParseArgs1[0],
-                                                        valueParseArgs1[1],
-                                                        valueParseArgs1[2],
-                                                        valueParseArgs1[3],
-                                                        sheet.cell(column=cell.col_idx - 4,
-                                                                   row=cell.row + cellRowCorrection).value))
-        if valueParseArgs2[0] or valueParseArgs2[1] or valueParseArgs2[2] or valueParseArgs2[3]:
-            lessons.append(valueParser(valueParseArgs2[0],
-                                                        valueParseArgs2[1],
-                                                        valueParseArgs2[2],
-                                                        valueParseArgs2[3],
-                                                        sheet.cell(column=cell.col_idx - 4,
-                                                                   row=cell.row + cellRowCorrection).value))
+                valueParseArgs1[0] = cellValue
+            if newTpLine != -1:
+                valueParseArgs1[1] = typeValue[:newTpLine]
+                valueParseArgs2[1] = typeValue[newTpLine + 1:]
+            else:
+                valueParseArgs1[1] = typeValue
+            if newTcLine != -1:
+                valueParseArgs1[2] = teacherValue[:newTcLine]
+                valueParseArgs2[2] = teacherValue[newTcLine + 1:]
+            else:
+                valueParseArgs1[2] = teacherValue
+            if newRmLine != -1:
+                if newLine == -1:
+                    valueParseArgs1[3] = roomValue[:newRmLine] + roomValue[newRmLine + 1:]
+                else:
+                    valueParseArgs1[3] = roomValue[:newRmLine]
+                    valueParseArgs2[3] = roomValue[newRmLine + 1:]
+            else:
+                valueParseArgs1[3] = roomValue
+            if valueParseArgs2[0] and (valueParseArgs1[0][-10:] == valueParseArgs2[0][-10:]):  # проверка на ячейку 2,4 предмет\n кр 2,4 предмет
+                                                                    # Сравнивает значения с конца, что чисто в  теории
+                                                                    # позволяет понять совпадают или нет значения в яч.
+                valueParseArgs2[1] = valueParseArgs1[1]
+                valueParseArgs2[2] = valueParseArgs1[2]
+            if valueParseArgs1[0] or valueParseArgs1[1] or valueParseArgs1[2] or valueParseArgs1[3]:
+                lessons.append(valueParser(valueParseArgs1[0],
+                                                            valueParseArgs1[1],
+                                                            valueParseArgs1[2],
+                                                            valueParseArgs1[3],
+                                                            pairNum))
+            if valueParseArgs2[0] or valueParseArgs2[1] or valueParseArgs2[2] or valueParseArgs2[3]:
+                lessons.append(valueParser(valueParseArgs2[0],
+                                                            valueParseArgs2[1],
+                                                            valueParseArgs2[2],
+                                                            valueParseArgs2[3],
+                                                            pairNum))
 
         return lessons
