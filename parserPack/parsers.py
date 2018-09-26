@@ -5,7 +5,7 @@ from parserPack import usualDictCreator
 
 
 def other(dirName, listOfFiles):
-    groupNameTmplt = re.compile(r'(?:[а-яё]{4}[-]\d\d[-]\d\d){1}', re.I)
+    groupNameTmplt = re.compile(r'(?:[а-яё]{4}[-]\d\d[-]\d\d){1}(?:\s[(]\d[)])*(?:[(]\d[)])*', re.I)
     for file in listOfFiles:
         wb = load_workbook(dirName + '\\' +file)
         print(file)
