@@ -4,7 +4,7 @@ from parserPack.cellValueAnalyzer import valueHandler
 def usualPairHandler(sheet, cell):
     day = []
     for i in range(0, 12, 2):
-        lesson = valueHandler(sheet, sheet[cell.column + str(cell.row+i)])
+        lesson = valueHandler(sheet, sheet[cell.column + str(cell.row+i)], (i+2)/2)
         if lesson:
             day.extend(lesson)
     return day

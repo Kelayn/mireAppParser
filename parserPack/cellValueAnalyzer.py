@@ -2,7 +2,7 @@ from parserPack.RE_ValueAnalyzer import valueParser
 
 
 # Обработчик значения
-def valueHandler(sheet, cell):
+def valueHandler(sheet, cell, pairNum):
     cellRowCorrection = 0
     if cell.row % 2 != 0:
         cellRowCorrection -= 1
@@ -55,14 +55,12 @@ def valueHandler(sheet, cell):
                                                         valueParseArgs1[1],
                                                         valueParseArgs1[2],
                                                         valueParseArgs1[3],
-                                                        sheet.cell(column=cell.col_idx - 4,
-                                                                   row=cell.row + cellRowCorrection).value))
+                                                        pairNum))
         if valueParseArgs2[0] or valueParseArgs2[1] or valueParseArgs2[2] or valueParseArgs2[3]:
             lessons.append(valueParser(valueParseArgs2[0],
                                                         valueParseArgs2[1],
                                                         valueParseArgs2[2],
                                                         valueParseArgs2[3],
-                                                        sheet.cell(column=cell.col_idx - 4,
-                                                                   row=cell.row + cellRowCorrection).value))
+                                                        pairNum))
 
         return lessons

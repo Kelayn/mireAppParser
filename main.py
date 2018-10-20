@@ -30,7 +30,7 @@ def main():
                 #  print(schedule)
                 with open('C:/Test/json/' + groupName[0] + '.json', 'w') as json_file:
                     json.dump(schedule, json_file, ensure_ascii=False)
-    # jsonLoader.uploadJson()
+    jsonLoader.uploadJson()
 
 
 main()
