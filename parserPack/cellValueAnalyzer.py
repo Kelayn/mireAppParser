@@ -21,10 +21,14 @@ def valueHandler(sheet, locCell, pairNum):
             newTcLine = -1
             newRmLine = -1
 
-            if cellValue: newLine = str(cellValue).find('\n')
-            if typeValue: newTpLine = str(typeValue).find('\n')
-            if teacherValue: newTcLine = str(teacherValue).find('\n')
-            if roomValue: newRmLine = str(roomValue).find('\n')
+            if cellValue:
+                newLine = str(cellValue).find('\n')
+            if typeValue:
+                newTpLine = str(typeValue).find('\n')
+            if teacherValue:
+                newTcLine = str(teacherValue).find('\n')
+            if roomValue:
+                newRmLine = str(roomValue).find('\n')
 
             valueParseArgs1 = [None, None, None, None]
             valueParseArgs2 = [None, None, None, None]
@@ -34,12 +38,12 @@ def valueHandler(sheet, locCell, pairNum):
                 valueParseArgs2[0] = cellValue[newLine + 1:]
             else:
                 valueParseArgs1[0] = cellValue
-            if newTpLine != -1:
+            if newTpLine != -1 and valueParseArgs2[0]:
                 valueParseArgs1[1] = typeValue[:newTpLine]
                 valueParseArgs2[1] = typeValue[newTpLine + 1:]
             else:
                 valueParseArgs1[1] = typeValue
-            if newTcLine != -1:
+            if newTcLine != -1 and valueParseArgs2[0]:
                 valueParseArgs1[2] = teacherValue[:newTcLine]
                 valueParseArgs2[2] = teacherValue[newTcLine + 1:]
             else:
@@ -65,14 +69,16 @@ def valueHandler(sheet, locCell, pairNum):
                                                                         # типы разные?????
                 if (not valueParseArgs2[2]) and (valueParseArgs2[1] == valueParseArgs1[1]):
                     valueParseArgs2[2] = valueParseArgs1[2]
-            if valueParseArgs1[0] or valueParseArgs1[1] or valueParseArgs1[2] or valueParseArgs1[3]:
+            if valueParseArgs2[0] and (not valueParseArgs2[3]) and valueParseArgs1[3]:
+                valueParseArgs2[3] = valueParseArgs1[3]  # случай, когда есть два значения и одна общая комната
+            if valueParseArgs1[0]:
                 # extend or append?
                 lessons.extend(valueParser(valueParseArgs1[0],
                                                             valueParseArgs1[1],
                                                             valueParseArgs1[2],
                                                             valueParseArgs1[3],
                                                             pairNum))
-            if valueParseArgs2[0] or valueParseArgs2[1] or valueParseArgs2[2] or valueParseArgs2[3]:
+            if valueParseArgs2[0]:
                 # extend or append?
                 lessons.extend(valueParser(valueParseArgs2[0],
                                                             valueParseArgs2[1],

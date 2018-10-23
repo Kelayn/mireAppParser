@@ -28,11 +28,12 @@ def valueParser(cellValue, typeO, teacher, room, pairNum):
     for ind in range(2):
         if list1:
             if len(list1) == 1:
-                xcptLen = (len(list1[0]))  # Длина подстроки
-                cutPos = cellValue.find('кр')  # Позиция начала подстроки
-                cellValue = cellValue[:cutPos] + cellValue[cutPos + xcptLen:]  # вырезание подстроки
-                xcptNums = numTmplt.findall(list1[0])  # список "кр" недель
-                if xcptNums: lesson["except"] = xcptNums
+                if ind == 0:
+                    xcptLen = (len(list1[0]))  # Длина подстроки
+                    cutPos = cellValue.find('кр')  # Позиция начала подстроки
+                    cellValue = cellValue[:cutPos] + cellValue[cutPos + xcptLen:]  # вырезание подстроки
+                    xcptNums = numTmplt.findall(list1[0])  # список "кр" недель
+                    if xcptNums: lesson["except"] = xcptNums
             elif len(list1) == 2:
                 longRow = True
                 if ind == 0:
@@ -76,7 +77,7 @@ def valueParser(cellValue, typeO, teacher, room, pairNum):
                     if fromNum: astLesson["startsFrom"] = fromNum
 
     # поиск недель, выделение и вырезание, список недель
-    weeksTmplt = re.compile(r'\d+\d*(?:\s*,\s*\d\d*)*\s*[н]*[.]*\s*', re.I)  # ТУТ НЕ БЫЛО [.]*
+    weeksTmplt = re.compile(r'\d+(?:\s*,\s*\d\d*)*\s*[н]*[.]*\s*', re.I)  # ТУТ НЕ БЫЛО [.]*  (?:\d\s[гр]) как сделать чтобы этого не было в списке
     if cellValue: list1 = (weeksTmplt.findall(cellValue))  # Список из подстроки
     for ind in range(2):
         if list1 and (cellValue.find("3-D") == -1):
