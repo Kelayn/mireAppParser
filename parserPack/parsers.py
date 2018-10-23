@@ -20,7 +20,7 @@ def other(dirName, listOfFiles):
                 cell = sheet[cell.column + str(cell.row)]
                 evenCell = sheet[cell.column + str(cell.row)]
                 schedule = usualDictCreator(sheet, cell, evenCell)
-                with open('C:/Test/_json/' + groupName[0] + '.json', 'w') as json_file:
+                with open('Test/_json/' + groupName[0] + '.json', 'w') as json_file:
                     json.dump(schedule, json_file, ensure_ascii=False)
 
 
