@@ -7,7 +7,7 @@ def main():
     # Шаблон на имя группы
 
     # listOfFiles = os.listdir("C:\Test\schedule")
-    for dir_, subDirs, files in os.walk("C:\Test\_schedule"):
+    for dir_, subDirs, files in os.walk("Test\_schedule"):
         if not files:
             continue
         parserChoice(dir_, files)
