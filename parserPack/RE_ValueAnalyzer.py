@@ -23,7 +23,7 @@ def valueParser(cellValue, typeO, teacher, room, pairNum):
     numTmplt = re.compile('\d+\d*')
 
     # поиск "кр", выделение и вырезание подстроки "кр", список недель "кр"
-    xcptTmplt = re.compile(r'\bкр+[.]*\s*\d+\d*(?:\s*,\s*\d\d*\s*)*\s*[н]*[.]*\s*', re.I)  # Шаблон
+    xcptTmplt = re.compile(r'\bкр+(?:оме)*[.]*\s*\d+\d*(?:\s*,\s*\d\d*\s*)*\s*[н]*[.]*\s*', re.I)  # Шаблон
     if cellValue: list1 = (xcptTmplt.findall(cellValue))  # Список из подстроки
     for ind in range(2):
         if list1:
@@ -59,7 +59,7 @@ def valueParser(cellValue, typeO, teacher, room, pairNum):
                     fromLen = (len(list1[0]))  # Длина подстроки
                     cutPos = cellValue.find('с')  # Позиция начала подстроки
                     cellValue = cellValue[:cutPos] + cellValue[cutPos + fromLen:]  # вырезание подстроки
-                    fromNum = numTmplt.findall(list1[0][0])  # "с" неделя
+                    fromNum = numTmplt.findall(list1[0])[0]  # "с" неделя
                     if fromNum: lesson["startsFrom"] = fromNum
             if len(list1) == 2:
                 longRow = True
@@ -67,7 +67,7 @@ def valueParser(cellValue, typeO, teacher, room, pairNum):
                     fromLen = (len(list1[0]))  # Длина подстроки
                     cutPos = cellValue.find('с')  # Позиция начала подстроки
                     cellValue = cellValue[:cutPos] + cellValue[cutPos + fromLen:]  # вырезание подстроки
-                    fromNum = numTmplt.findall(list1[0][0])  # "с" неделя
+                    fromNum = numTmplt.findall(list1[0])[0]  # "с" неделя
                     if fromNum: lesson["startsFrom"] = fromNum
                 if ind == 1:
                     fromLen = (len(list1[1]))  # Длина подстроки
@@ -77,7 +77,7 @@ def valueParser(cellValue, typeO, teacher, room, pairNum):
                     if fromNum: astLesson["startsFrom"] = fromNum
 
     # поиск недель, выделение и вырезание, список недель
-    weeksTmplt = re.compile(r'\d+(?:\s*,\s*\d\d*)*\s*[н]*[.]*\s*', re.I)  # (?:\d\s[гр]) как сделать чтобы этого не было в списке
+    weeksTmplt = re.compile(r'\d+(?:\s*,\s*\d\d*)*\s*[н]*[.]*\s*', re.I)
     if cellValue: list1 = (weeksTmplt.findall(cellValue))  # Список из подстроки
     for ind in range(2):
         if list1 and (cellValue.find("3-D") == -1):
@@ -140,7 +140,8 @@ def valueParser(cellValue, typeO, teacher, room, pairNum):
                     # если такого не будет
                 elif ind == 1:
                     astLesson["room"] = room[:room.find('\n')+1] + ' ' + room[room.rfind(' ')+1:len(room)]
-    if astLesson["lesson"]: lessonList.append(astLesson)
+    if astLesson["lesson"]:
+        lessonList.append(astLesson)
     lessonList.append(lesson)
     return lessonList
 

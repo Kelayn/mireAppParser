@@ -16,8 +16,14 @@ def valueHandler(sheet, locCell, pairNum):
         if cellValue != "*Занятия по адресу:" and cellValue != "ул. М.Пироговская, д.1" \
                 and cellValue != "Пр-т Вернадского, 86" and cellValue != "Занятия по адресу:"\
                 and cellValue != "…………………." and cellValue != "…………………" and cellValue != "……………………"\
+                and cellValue != "………………………." and cellValue != "………………….." and cellValue != "……………………."\
+                and cellValue != "……………………."  and cellValue != "………………………." and cellValue != "……………………….."\
+                and cellValue != "…………………" and cellValue != "………………….." and cellValue != "…………………"\
+                and cellValue != "………………" and cellValue != "……………….." and cellValue != "……………." \
+                and cellValue != "…………….." \
                 and cellValue != "В-86 - занятия в кампусе по адресу Проспекте Вернадского, д.86":
-
+            if not cellValue and sheet[locCell.column + str(locCell.row-1)].value == "Военная\nподготовка":
+                cellValue = "Военная\nподготовка"
             cellValue_List = cellValue.split('\n')
             if sheet.cell(column=locCell.col_idx + 1, row=locCell.row).value:
                 typeO_List = sheet.cell(column=locCell.col_idx + 1, row=locCell.row).value.split('\n')
@@ -54,7 +60,10 @@ def valueHandler(sheet, locCell, pairNum):
                         valueParseArgs[3] = "Вероятно " + room_List[i - 1]
                     else:
                         valueParseArgs[3] = "Вероятно " + room_List[len(room_List) - 1]
-
+                if len(cellValue_List) == 1:
+                    valueParseArgs[1] = ''.join(typeO_List)
+                    valueParseArgs[2] = ''.join(teacher_List)
+                    valueParseArgs[3] = ''.join(room_List)
                 lessons.extend(valueParser(valueParseArgs[0],
                                            valueParseArgs[1],
                                            valueParseArgs[2],
