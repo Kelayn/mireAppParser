@@ -81,9 +81,12 @@ def valueParser(cellValue, typeO, teacher, room, pairNum):
     weeksTmplt = re.compile(r'\d+(?:\s*,\s*\d\d*)*\s*[н]*[.]*\s*', re.I)
     if cellValue: list1 = (weeksTmplt.findall(cellValue))  # Список из подстроки
     for ind in range(2):
-        if list1 and (cellValue.find("3-D") == -1):
+        if list1 and (cellValue.find("3-D") == -1) and (cellValue.find("3D") == -1):
             if len(list1) == 1:
-                if ind == 0 and list1[0] != "1 " and list1[0] != "2 ":
+                if ind == 0 and list1[0] != "1 " and list1[0] != "2 " \
+                    :
+                   # and (((cellValue.find("3-D") != -1) == (cellValue.find("3D") != -1)) == list1[0] != "3"):
+                        # GIVES TRUE BETWEEN 2 FINDS ONLY IF BOTH ARE FALSE BECAUSE 2 TRUE ISN'T POSSIBLE
                     weeksLen = (len(list1[0]))  # Длина подстроки
                     cutPos = cellValue.find(list1[0][0])  # Позиция начала подстроки
                     cellValue = cellValue[:cutPos] + cellValue[cutPos + weeksLen:]  # вырезание подстроки
@@ -143,12 +146,12 @@ def valueParser(cellValue, typeO, teacher, room, pairNum):
                     lesson["room"] = room
             elif astLesson["lesson"]:
                 if ind == 0:
-                    lesson["room"] = room[:room.find('\n')+1] + ' ' + room[room.find("\n")+1:room.find(' ')]
+                    lesson["room"] = room[:room.find(' ')] + ' или ' + room[room.find(" "):]
                     # Ищет первый знак таубляции, чтобы добавить адрес кампуса (вопрос, а что если такого не будет?)
                     # Судя по поведению в консоли - "+1" не изменит вывод, при этом компенсирует случай,
                     # если такого не будет
                 elif ind == 1:
-                    astLesson["room"] = room[:room.find('\n')+1] + ' ' + room[room.rfind(' ')+1:len(room)]
+                    astLesson["room"] = room[:room.find(' ')] + ' или ' + room[room.find(" "):]
     if astLesson["lesson"]:
         lessonList.append(astLesson)
     lessonList.append(lesson)
