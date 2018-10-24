@@ -17,7 +17,7 @@ def valueHandler(sheet, locCell, pairNum):
                 and cellValue != "Пр-т Вернадского, 86" and cellValue != "Занятия по адресу:"\
                 and cellValue != "…………………." and cellValue != "…………………" and cellValue != "……………………"\
                 and cellValue != "………………………." and cellValue != "………………….." and cellValue != "……………………."\
-                and cellValue != "……………………."  and cellValue != "………………………." and cellValue != "……………………….."\
+                and cellValue != "……………………." and cellValue != "………………………." and cellValue != "……………………….."\
                 and cellValue != "…………………" and cellValue != "………………….." and cellValue != "…………………"\
                 and cellValue != "………………" and cellValue != "……………….." and cellValue != "……………." \
                 and cellValue != "…………….." \

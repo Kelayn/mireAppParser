@@ -77,6 +77,7 @@ def valueParser(cellValue, typeO, teacher, room, pairNum):
                     if fromNum: astLesson["startsFrom"] = fromNum
 
     # поиск недель, выделение и вырезание, список недель
+    cellValue1 = cellValue
     weeksTmplt = re.compile(r'\d+(?:\s*,\s*\d\d*)*\s*[н]*[.]*\s*', re.I)
     if cellValue: list1 = (weeksTmplt.findall(cellValue))  # Список из подстроки
     for ind in range(2):
@@ -85,14 +86,16 @@ def valueParser(cellValue, typeO, teacher, room, pairNum):
                 if ind == 0 and list1[0] != "1 " and list1[0] != "2 ":
                     weeksLen = (len(list1[0]))  # Длина подстроки
                     cutPos = cellValue.find(list1[0][0])  # Позиция начала подстроки
-                    cellValue = cellValue[:cutPos] + cellValue[cutPos + weeksLen:]  # вырезание подстроки (ТУТ БЫЛО +1)
+                    cellValue = cellValue[:cutPos] + cellValue[cutPos + weeksLen:]  # вырезание подстроки
                     weeksNums = numTmplt.findall(list1[0])  # Список недель
                     if weeksNums:   lesson["periodical"] = weeksNums
             if len(list1) == 2:
                 if ind == 0 and list1[0] != "1 " and list1[0] != "2 ":
                     weeksLen = (len(list1[0]))  # Длина подстроки
-                    cutPos = cellValue.find(list1[0][0])  # Позиция начала подстроки
-                    cellValue = cellValue[:cutPos] + cellValue[cutPos + weeksLen:]  # вырезание подстроки (ТУТ БЫЛО +1)
+                    cutPos = cellValue.find(list1[0])  # Позиция начала подстроки
+                    endLen = cellValue.find(list1[1])
+                    cellValue1 = cellValue[:cutPos] + cellValue[cutPos + weeksLen:endLen]
+                    cellValue = cellValue[cellValue.find(list1[1]):]  # вырезанная первая подстрока
                     weeksNums = numTmplt.findall(list1[0])  # Список недель
                     if weeksNums: lesson["periodical"] = weeksNums
                 if ind == 1 and list1[1] != "1 " and list1[1] != "2 ":
@@ -105,9 +108,9 @@ def valueParser(cellValue, typeO, teacher, room, pairNum):
 
     if cellValue and not longRow:
         lesson["lesson"] = cellValue
-    elif cellValue and longRow:
-        lesson["lesson"] = cellValue[:cellValue.rfind(' ')]
-        astLesson["lesson"] = cellValue[cellValue.rfind(' ')+1:]
+    elif cellValue1 and longRow:
+        lesson["lesson"] = cellValue1
+        astLesson["lesson"] = cellValue
 
     for ind in range(2):
         if typeO:
@@ -115,17 +118,23 @@ def valueParser(cellValue, typeO, teacher, room, pairNum):
                 lesson["type"] = typeO  # вместится любой вид предмета, если он один
             elif astLesson["lesson"]:
                 if ind == 0:
-                    lesson["type"] = typeO[:typeO.find(' ')]
+                    if typeO.find(' ') != -1:
+                        lesson["type"] = typeO[:typeO.find(' ')]
+                    else:
+                        lesson["type"] = "Вероятно " + typeO
                 if ind == 1:
-                    astLesson["type"] = typeO[typeO.rfind(' '):]  # обработка на пр    лек (в случае,если нет табуляции)
+                    if typeO.rfind(' ') != -1:
+                        astLesson["type"] = typeO[typeO.rfind(' '):]  # обработка на пр    лек (в случае,если нет табуляции)
+                    else:
+                        astLesson["type"] = "Вероятно " + typeO
         if teacher:
             if teacher != "митхт" and teacher != "мгупи":
                 if not astLesson["lesson"]:
                     if ind == 0:
                         lesson["teacher"] = teacher
                 elif astLesson["lesson"]:
-                    if ind == 0: lesson["teacher"] = "Неявное расписание"
-                    if ind == 1: astLesson["teacher"] = "Неявное расписание"  # если 2 предмета в строчку,\
+                    if ind == 0: lesson["teacher"] = "Вероятно " + teacher
+                    if ind == 1: astLesson["teacher"] = "Вероятно " + teacher  # если 2 предмета в строчку,\
                     #  а препод на 2й предмет
         if room:
             room = str(room)
