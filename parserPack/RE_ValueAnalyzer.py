@@ -81,19 +81,20 @@ def valueParser(cellValue, typeO, teacher, room, pairNum):
     weeksTmplt = re.compile(r'\d+(?:\s*,\s*\d\d*)*\s*[н]*[.]*\s*', re.I)
     if cellValue: list1 = (weeksTmplt.findall(cellValue))  # Список из подстроки
     for ind in range(2):
-        if list1 and (cellValue.find("3-D") == -1) and (cellValue.find("3D") == -1):
+        if list1:
             if len(list1) == 1:
-                if ind == 0 and list1[0] != "1 " and list1[0] != "2 " \
-                    :
-                   # and (((cellValue.find("3-D") != -1) == (cellValue.find("3D") != -1)) == list1[0] != "3"):
-                        # GIVES TRUE BETWEEN 2 FINDS ONLY IF BOTH ARE FALSE BECAUSE 2 TRUE ISN'T POSSIBLE
+                if ind == 0 and list1[0] != "1 " and list1 != "1" and list1[0] != "2 ":
+                    if(((cellValue.find("3-D") != -1) or (cellValue.find("3D") != -1)) and list1[0] == "3"):
+                        continue;  # may be problem in 3d goes only on 3rd week
                     weeksLen = (len(list1[0]))  # Длина подстроки
                     cutPos = cellValue.find(list1[0][0])  # Позиция начала подстроки
                     cellValue = cellValue[:cutPos] + cellValue[cutPos + weeksLen:]  # вырезание подстроки
                     weeksNums = numTmplt.findall(list1[0])  # Список недель
                     if weeksNums:   lesson["periodical"] = weeksNums
             if len(list1) == 2:
-                if ind == 0 and list1[0] != "1 " and list1[0] != "2 ":
+                if ind == 0 and list1[0] != "1 " and list1 != "1" and list1[0] != "2 ":
+                    if ((cellValue.find("3-D") != -1) or (cellValue.find("3D") != -1)) and list1[0] == "3":
+                        continue;   # may be problem in 3d goes only on 3rd week
                     weeksLen = (len(list1[0]))  # Длина подстроки
                     cutPos = cellValue.find(list1[0])  # Позиция начала подстроки
                     endLen = cellValue.find(list1[1])
@@ -101,7 +102,10 @@ def valueParser(cellValue, typeO, teacher, room, pairNum):
                     cellValue = cellValue[cellValue.find(list1[1]):]  # вырезанная первая подстрока
                     weeksNums = numTmplt.findall(list1[0])  # Список недель
                     if weeksNums: lesson["periodical"] = weeksNums
-                if ind == 1 and list1[1] != "1 " and list1[1] != "2 ":
+                if ind == 1 and list1[1] != "1 " and list1 != "1" and list1[1] != "2 ":
+                    if ((cellValue.find("3-D") != -1) or (cellValue.find("3D") != -1)) and list1[1] == "3":
+                        cellValue = cellValue[4:]
+                        continue;   # may be problem in 3d goes only on 3rd week
                     longRow = True
                     weeksLen = (len(list1[1]))  # Длина подстроки
                     cutPos = cellValue.find(list1[1][0])  # Позиция начала подстроки
@@ -124,34 +128,43 @@ def valueParser(cellValue, typeO, teacher, room, pairNum):
                     if typeO.find(' ') != -1:
                         lesson["type"] = typeO[:typeO.find(' ')]
                     else:
-                        lesson["type"] = "Вероятно " + typeO
+                        lesson["type"] = "(?)" + typeO
                 if ind == 1:
                     if typeO.rfind(' ') != -1:
                         astLesson["type"] = typeO[typeO.rfind(' '):]  # обработка на пр    лек (в случае,если нет табуляции)
                     else:
-                        astLesson["type"] = "Вероятно " + typeO
+                        astLesson["type"] = "(?)" + typeO
         if teacher:
             if teacher != "митхт" and teacher != "мгупи":
                 if not astLesson["lesson"]:
                     if ind == 0:
                         lesson["teacher"] = teacher
                 elif astLesson["lesson"]:
-                    if ind == 0: lesson["teacher"] = "Вероятно " + teacher
-                    if ind == 1: astLesson["teacher"] = "Вероятно " + teacher  # если 2 предмета в строчку,\
+                    if ind == 0: lesson["teacher"] = "(?) " + teacher
+                    if ind == 1: astLesson["teacher"] = "(?)" + teacher  # если 2 предмета в строчку,\
                     #  а препод на 2й предмет
         if room:
             room = str(room)
             if not astLesson["lesson"]:
                 if ind == 0:
-                    lesson["room"] = room
+                    if (room.find('\n') != - 1):
+                        lesson["room"] = room[:room.find('\n')] + ' ' + room[room.find('\n'):]
+                    else:
+                        lesson["room"] = room
             elif astLesson["lesson"]:
                 if ind == 0:
-                    lesson["room"] = room[:room.find(' ')] + ' или ' + room[room.find(" "):]
+                    if (room.find('\n') != - 1):
+                        lesson["room"] = "(?) " + room[:room.find('\n')] + ' ' + room[room.find('\n'):]
+                    else:
+                        lesson["room"] = "(?) " + room
                     # Ищет первый знак таубляции, чтобы добавить адрес кампуса (вопрос, а что если такого не будет?)
                     # Судя по поведению в консоли - "+1" не изменит вывод, при этом компенсирует случай,
                     # если такого не будет
                 elif ind == 1:
-                    astLesson["room"] = room[:room.find(' ')] + ' или ' + room[room.find(" "):]
+                    if (room.find('\n') != - 1):
+                        astLesson["room"] = "(?) " + room[:room.find('\n')] + ' ' + room[room.find('\n'):]
+                    else:
+                        astLesson["room"] = "(?) " + room
     if astLesson["lesson"]:
         lessonList.append(astLesson)
     lessonList.append(lesson)
