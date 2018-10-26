@@ -4,7 +4,12 @@ from parserPack.cellValueAnalyzer import valueHandler
 def usualPairHandler(sheet, cell):
     day = []
     for i in range(0, 12, 2):
+<<<<<<< HEAD
         lesson = valueHandler(sheet, sheet[cell.column + str(cell.row+i)], (i+2)/2)
+=======
+        pairNum = i/2 + 1
+        lesson = valueHandler(sheet, sheet[cell.column + str(cell.row+i)], pairNum)
+>>>>>>> TEST
         if lesson:
             day.extend(lesson)
     return day
@@ -23,5 +28,12 @@ def usualWeekHandler(sheet, cell, num):
     }
     return days
 
+
+def usualDictCreator(sheet, cell, evenCell):
+    schedule = {
+        "odd": usualWeekHandler(sheet, cell, 0),
+        "even": usualWeekHandler(sheet, evenCell, 1)
+    }
+    return schedule
 # добавить алгоритмы прохода по вечеркам и маге
 # ...

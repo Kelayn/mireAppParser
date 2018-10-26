@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="0ec46f02-fa48-4919-a6d4-3ffda207bb74" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parserPack/cellValueAnalyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/parserPack/cellValueAnalyzer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parserPack/weekDictCreator.py" beforeDir="false" afterPath="$PROJECT_DIR$/parserPack/weekDictCreator.py" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/parserPack/RE_ValueAnalyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/parserPack/RE_ValueAnalyzer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parserPack/cellValueAnalyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/parserPack/cellValueAnalyzer.py" afterDir="false" />
+>>>>>>> TEST
     </list>
+=======
+    <list default="true" id="0ec46f02-fa48-4919-a6d4-3ffda207bb74" name="Default Changelist" comment="" />
+>>>>>>> b7f1136b2586cffde9a1d3d552acdeb5ff924a77
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,51 +23,73 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+<<<<<<< HEAD
     <SUITE FILE_PATH="coverage/mireAppParser$main.coverage" NAME="main Coverage Results" MODIFIED="1539212160240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+=======
+<<<<<<< HEAD
+>>>>>>> TEST
     <SUITE FILE_PATH="coverage/mireAppParser$jsonLoader.coverage" NAME="jsonLoader Coverage Results" MODIFIED="1536700858626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/jsonLoader" />
+    <SUITE FILE_PATH="coverage/mireAppParser$main.coverage" NAME="main Coverage Results" MODIFIED="1538565757715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+=======
+    <SUITE FILE_PATH="coverage/mireAppParser$main.coverage" NAME="main Coverage Results" MODIFIED="1537877483751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/mireAppParser$jsonLoader.coverage" NAME="jsonLoader Coverage Results" MODIFIED="1536700858626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/jsonLoader" />
+>>>>>>> b7f1136b2586cffde9a1d3d552acdeb5ff924a77
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-702906169">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.100" value="1" />
+          <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.25" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.40" value="1" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="RE_ValueAnalizer" value="1" />
-          <entry key="py" value="5" />
+          <entry key="py" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="6" />
+          <entry key="Python" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="3" />
-          <entry key="py" value="20" />
+          <entry key="py" value="6490" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="20" />
+          <entry key="Python" value="6489" />
+          <entry key="RegExp" value="1" />
         </counts>
       </usages-collector>
     </session>
     <session id="-1494172300">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+<<<<<<< HEAD
           <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.28" value="2" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.opened" value="5" />
+=======
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.28" value="1" />
+          <entry key="project.open.time.31" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="4" />
+>>>>>>> TEST
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -90,8 +121,18 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jsonLoader/jsonLoader.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="153">
               <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="986">
+              <caret line="79" column="64" selection-start-line="79" selection-start-column="64" selection-end-line="79" selection-end-column="64" />
+=======
+            <state relative-caret-position="755">
+              <caret line="147" selection-start-line="147" selection-end-line="147" />
+>>>>>>> b7f1136b2586cffde9a1d3d552acdeb5ff924a77
+>>>>>>> TEST
             </state>
           </provider>
         </entry>
@@ -99,8 +140,18 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parserPack/RE_ValueAnalyzer.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="85">
               <caret line="8" selection-start-line="8" selection-end-line="8" />
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="1224">
+              <caret line="72" selection-start-line="72" selection-end-line="72" />
+=======
+            <state relative-caret-position="221">
+              <caret line="13" column="75" selection-start-line="13" selection-start-column="75" selection-end-line="13" selection-end-column="75" />
+>>>>>>> b7f1136b2586cffde9a1d3d552acdeb5ff924a77
+>>>>>>> TEST
             </state>
           </provider>
         </entry>
@@ -108,17 +159,42 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parserPack/cellValueAnalyzer.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="417">
               <caret line="63" column="63" selection-start-line="63" selection-start-column="63" selection-end-line="63" selection-end-column="63" />
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="289">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+=======
+            <state relative-caret-position="391">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+>>>>>>> b7f1136b2586cffde9a1d3d552acdeb5ff924a77
+>>>>>>> TEST
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/parserPack/weekDictCreator.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
               <caret line="6" column="83" selection-start-line="6" selection-start-column="83" selection-end-line="6" selection-end-column="83" />
+=======
+        <entry file="file://$PROJECT_DIR$/parserPack/parsers.py">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="255">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+=======
+            <state relative-caret-position="238">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+>>>>>>> b7f1136b2586cffde9a1d3d552acdeb5ff924a77
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+>>>>>>> TEST
             </state>
           </provider>
         </entry>
@@ -126,11 +202,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="357">
               <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
+=======
+            <state>
+              <caret column="9" selection-start-column="9" selection-end-column="9" />
+>>>>>>> TEST
             </state>
           </provider>
         </entry>
@@ -145,6 +226,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -158,11 +240,16 @@
         <option value="$PROJECT_DIR$/parser/RE_ValueAnalyzer.py" />
         <option value="$PROJECT_DIR$/parser/__init__.py" />
         <option value="$PROJECT_DIR$/parser/weekDictCreator.py" />
-        <option value="$PROJECT_DIR$/parserPack/RE_ValueAnalyzer.py" />
+        <option value="$PROJECT_DIR$/parserPack/parser.py" />
         <option value="$PROJECT_DIR$/parserPack/__init__.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/parserPack/weekDictCreator.py" />
+        <option value="$PROJECT_DIR$/parserPack/parsers.py" />
         <option value="$PROJECT_DIR$/parserPack/cellValueAnalyzer.py" />
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/parserPack/RE_ValueAnalyzer.py" />
+>>>>>>> TEST
       </list>
     </option>
   </component>
@@ -172,48 +259,31 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="255" />
     <option name="y" value="49" />
+=======
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="265" />
+    <option name="y" value="-20" />
+>>>>>>> TEST
     <option name="width" value="975" />
-    <option name="height" value="1049" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="mireAppParser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mireAppParser" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mireAppParser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mireAppParser" type="462c0819:PsiDirectoryNode" />
-              <item name="jsonLoader" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mireAppParser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mireAppParser" type="462c0819:PsiDirectoryNode" />
-              <item name="parserPack" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/GitHubDesktop/app-1.3.5/resources/app/git/mingw64/bin/git.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -257,9 +327,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\araka\PycharmProjects\mireAppParser\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -297,9 +367,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+=======
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+>>>>>>> b7f1136b2586cffde9a1d3d552acdeb5ff924a77
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
+<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="1" weight="0.26385927" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
@@ -312,6 +388,20 @@
       <window_info anchor="bottom" id="Find" order="7" weight="0.329718" />
       <window_info anchor="bottom" id="Run" order="8" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.3991323" />
+=======
+      <window_info content_ui="combo" id="Project" order="1" weight="0.26912752" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32907802" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="3" weight="0.32907802" />
+      <window_info anchor="bottom" id="Python Console" order="4" weight="0.32907802" />
+      <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.329718" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.235461" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+>>>>>>> TEST
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" />
@@ -323,7 +413,11 @@
     </layout>
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
+<<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.26385927" />
+=======
+      <window_info content_ui="combo" id="Project" order="1" weight="0.26912752" />
+>>>>>>> TEST
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="1" />
@@ -333,8 +427,13 @@
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.329718" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+=======
+      <window_info anchor="bottom" id="Run" order="8" weight="0.235461" />
+      <window_info active="true" anchor="bottom" id="Debug" order="9" visible="true" weight="0.4" />
+>>>>>>> TEST
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" />
@@ -355,8 +454,18 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+<<<<<<< HEAD
           <url>file://$PROJECT_DIR$/parserPack/weekDictCreator.py</url>
           <line>16</line>
+=======
+          <url>file://$PROJECT_DIR$/parserPack/parsers.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/parserPack/cellValueAnalyzer.py</url>
+          <line>10</line>
+>>>>>>> TEST
           <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
@@ -374,6 +483,7 @@
     <entry file="file://$PROJECT_DIR$/jsonLoader/jsonLoader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
+<<<<<<< HEAD
           <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
         </state>
       </provider>
@@ -389,25 +499,111 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
           <caret line="301" selection-start-line="301" selection-end-line="301" />
+=======
+          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+>>>>>>> TEST
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parserPack/parser.py" />
+    <entry file="file://$PROJECT_DIR$/parserPack/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+<<<<<<< HEAD
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Lib/zipfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="1181" selection-start-line="1181" selection-end-line="1181" />
+=======
+>>>>>>> b7f1136b2586cffde9a1d3d552acdeb5ff924a77
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Lib/zipfile.py" />
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/openpyxl/reader/excel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="121" selection-start-line="121" selection-end-line="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Lib/_bootlocale.py" />
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/openpyxl/packaging/manifest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="162" selection-start-line="162" selection-end-line="162" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/openpyxl/utils/cell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="153" selection-start-line="153" selection-end-line="153" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/openpyxl/cell/cell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="130" selection-start-line="130" selection-end-line="130" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/openpyxl/worksheet/worksheet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="362" selection-start-line="362" selection-end-line="362" />
+=======
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/openpyxl/cell/cell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="130" selection-start-line="130" selection-end-line="130" />
+>>>>>>> b7f1136b2586cffde9a1d3d552acdeb5ff924a77
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/parserPack/RE_ValueAnalyzer.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="85">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="986">
+          <caret line="79" column="64" selection-start-line="79" selection-start-column="64" selection-end-line="79" selection-end-column="64" />
+=======
+        <state relative-caret-position="755">
+          <caret line="147" selection-start-line="147" selection-end-line="147" />
+>>>>>>> b7f1136b2586cffde9a1d3d552acdeb5ff924a77
+>>>>>>> TEST
         </state>
       </provider>
     </entry>
     <entry file="file://M:/Python36/Lib/site-packages/openpyxl/cell/cell.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="176">
           <caret line="285" selection-start-line="285" selection-end-line="285" />
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="1224">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+=======
+        <state relative-caret-position="221">
+          <caret line="13" column="75" selection-start-line="13" selection-start-column="75" selection-end-line="13" selection-end-column="75" />
+>>>>>>> b7f1136b2586cffde9a1d3d552acdeb5ff924a77
+>>>>>>> TEST
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/parserPack/weekDictCreator.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="102">
           <caret line="6" column="83" selection-start-line="6" selection-start-column="83" selection-end-line="6" selection-end-column="83" />
         </state>
@@ -417,16 +613,45 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="417">
           <caret line="63" column="63" selection-start-line="63" selection-start-column="63" selection-end-line="63" selection-end-column="63" />
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+=======
+        <state relative-caret-position="391">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+>>>>>>> b7f1136b2586cffde9a1d3d552acdeb5ff924a77
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parserPack/parsers.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="255">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+=======
+        <state relative-caret-position="238">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+>>>>>>> b7f1136b2586cffde9a1d3d552acdeb5ff924a77
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+>>>>>>> TEST
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="357">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
           </folding>
+=======
+        <state>
+          <caret column="9" selection-start-column="9" selection-end-column="9" />
+>>>>>>> TEST
         </state>
       </provider>
     </entry>

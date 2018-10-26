@@ -1,14 +1,11 @@
-from openpyxl import load_workbook
-import re
-import json
 import os
 from jsonLoader import jsonLoader
-from parserPack import usualWeekHandler
-
+from parserPack import parserChoice
 
 
 def main():
     # Шаблон на имя группы
+<<<<<<< HEAD
     groupNameTmplt = re.compile(r'(?:[а-яё]{4}[-]\d\d[-]\d\d){1}', re.I)
     listOfFiles = os.listdir("C:\Test\schedule")
     for file in listOfFiles:
@@ -31,6 +28,18 @@ def main():
                 with open('C:/Test/json/' + groupName[0] + '.json', 'w') as json_file:
                     json.dump(schedule, json_file, ensure_ascii=False)
     jsonLoader.uploadJson()
+=======
+
+    # listOfFiles = os.listdir("C:\Test\schedule")
+    for dir_, subDirs, files in os.walk("Test\_schedule"):
+        if not files:
+            continue
+        parserChoice(dir_, files)
+    return
+
+    #  jsonLoader.uploadJson()
+>>>>>>> TEST
 
 
 main()
+jsonLoader.uploadJson()
