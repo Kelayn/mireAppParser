@@ -9,7 +9,6 @@ def other(dirName, listOfFiles):
     for file in listOfFiles:
         wb = load_workbook(dirName + '\\' +file)
         print(file)
-        input()
         sheet = wb.worksheets[0]
         # итерации по колонкам файлам
         for col in sheet.iter_cols(min_row=2, max_row=2):

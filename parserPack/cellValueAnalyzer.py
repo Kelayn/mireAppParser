@@ -41,25 +41,25 @@ def valueHandler(sheet, locCell, pairNum):
                     if i < len(typeO_List):
                         valueParseArgs[1] = typeO_List[i]
                     elif i - 1 < len(typeO_List):
-                        valueParseArgs[1] = "Вероятно " + typeO_List[i - 1]
+                        valueParseArgs[1] = typeO_List[i - 1]
                     else:
-                        valueParseArgs[1] = "Вероятно " + typeO_List[len(typeO_List) - 1]
+                        valueParseArgs[1] = typeO_List[len(typeO_List) - 1]
 
                 if teacher_List:
                     if i < len(teacher_List):
                         valueParseArgs[2] = teacher_List[i]
                     elif i - 1 < len(teacher_List) and i > 0:
-                        valueParseArgs[2] = "Вероятно " + teacher_List[i - 1]
+                        valueParseArgs[2] = teacher_List[i - 1]
                     else:
-                        valueParseArgs[2] = "Вероятно " + teacher_List[len(teacher_List) - 1]
+                        valueParseArgs[2] = teacher_List[len(teacher_List) - 1]
 
                 if room_List:
                     if i < len(room_List):
                         valueParseArgs[3] = room_List[i]
                     elif i - 1 < len(room_List) and i > 0:
-                        valueParseArgs[3] = "Вероятно " + room_List[i - 1]
+                        valueParseArgs[3] = room_List[i - 1]
                     else:
-                        valueParseArgs[3] = "Вероятно " + room_List[len(room_List) - 1]
+                        valueParseArgs[3] = room_List[len(room_List) - 1]
                 if len(cellValue_List) == 1:
                     valueParseArgs[1] = ''.join(typeO_List)
                     valueParseArgs[2] = ''.join(teacher_List)

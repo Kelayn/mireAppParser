@@ -128,20 +128,20 @@ def valueParser(cellValue, typeO, teacher, room, pairNum):
                     if typeO.find(' ') != -1:
                         lesson["type"] = typeO[:typeO.find(' ')]
                     else:
-                        lesson["type"] = "(?)" + typeO
+                        lesson["type"] = typeO
                 if ind == 1:
                     if typeO.rfind(' ') != -1:
                         astLesson["type"] = typeO[typeO.rfind(' '):]  # обработка на пр    лек (в случае,если нет табуляции)
                     else:
-                        astLesson["type"] = "(?)" + typeO
+                        astLesson["type"] = typeO
         if teacher:
             if teacher != "митхт" and teacher != "мгупи":
                 if not astLesson["lesson"]:
                     if ind == 0:
                         lesson["teacher"] = teacher
                 elif astLesson["lesson"]:
-                    if ind == 0: lesson["teacher"] = "(?) " + teacher
-                    if ind == 1: astLesson["teacher"] = "(?)" + teacher  # если 2 предмета в строчку,\
+                    if ind == 0: lesson["teacher"] = teacher
+                    if ind == 1: astLesson["teacher"] = teacher  # если 2 предмета в строчку,\
                     #  а препод на 2й предмет
         if room:
             room = str(room)
@@ -154,17 +154,17 @@ def valueParser(cellValue, typeO, teacher, room, pairNum):
             elif astLesson["lesson"]:
                 if ind == 0:
                     if (room.find('\n') != - 1):
-                        lesson["room"] = "(?) " + room[:room.find('\n')] + ' ' + room[room.find('\n'):]
+                        lesson["room"] = room[:room.find('\n')] + ' ' + room[room.find('\n'):]
                     else:
-                        lesson["room"] = "(?) " + room
+                        lesson["room"] = room
                     # Ищет первый знак таубляции, чтобы добавить адрес кампуса (вопрос, а что если такого не будет?)
                     # Судя по поведению в консоли - "+1" не изменит вывод, при этом компенсирует случай,
                     # если такого не будет
                 elif ind == 1:
                     if (room.find('\n') != - 1):
-                        astLesson["room"] = "(?) " + room[:room.find('\n')] + ' ' + room[room.find('\n'):]
+                        astLesson["room"] = room[:room.find('\n')] + ' ' + room[room.find('\n'):]
                     else:
-                        astLesson["room"] = "(?) " + room
+                        astLesson["room"] = room
     if astLesson["lesson"]:
         lessonList.append(astLesson)
     lessonList.append(lesson)
