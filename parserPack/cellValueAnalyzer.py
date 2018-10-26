@@ -2,17 +2,10 @@ from parserPack.RE_ValueAnalyzer import valueParser
 
 
 # Обработчик значения
-<<<<<<< HEAD
-def valueHandler(sheet, cell, pairNum):
-    cellRowCorrection = 0
-    if cell.row % 2 != 0:
-        cellRowCorrection -= 1
-=======
 def valueHandler(sheet, locCell, pairNum):
     if sheet.cell(column=locCell.col_idx, row=locCell.row-1).value == "Военная\nподготовка":
         locCell = sheet.cell(column=locCell.col_idx, row=locCell.row-1)
     if locCell.value:
->>>>>>> TEST
 
         lessons = []
         typeO_List = []
@@ -52,43 +45,6 @@ def valueHandler(sheet, locCell, pairNum):
                     else:
                         valueParseArgs[1] = typeO_List[len(typeO_List) - 1]
 
-<<<<<<< HEAD
-        if newLine != -1 and cellValue:
-            valueParseArgs1[0] = cellValue[:newLine]
-            valueParseArgs2[0] = cellValue[newLine + 1:]
-        else:
-            valueParseArgs1[0] = cellValue
-        if newTpLine != -1:
-            valueParseArgs1[1] = typeValue[:newTpLine]
-            valueParseArgs2[1] = typeValue[newTpLine + 1:]
-        else:
-            valueParseArgs1[1] = typeValue
-        if newTcLine != -1:
-            valueParseArgs1[2] = teacherValue[:newTcLine]
-            valueParseArgs2[2] = teacherValue[newTcLine + 1:]
-        else:
-            valueParseArgs1[2] = teacherValue
-        if newRmLine != -1:
-            if newLine == -1:
-                valueParseArgs1[3] = roomValue[:newRmLine] + roomValue[newRmLine + 1:]
-            else:
-                valueParseArgs1[3] = roomValue[:newRmLine]
-                valueParseArgs2[3] = roomValue[newRmLine + 1:]
-        else:
-            valueParseArgs1[3] = roomValue
-        if valueParseArgs1[0] or valueParseArgs1[1] or valueParseArgs1[2] or valueParseArgs1[3]:
-            lessons.append(valueParser(valueParseArgs1[0],
-                                                        valueParseArgs1[1],
-                                                        valueParseArgs1[2],
-                                                        valueParseArgs1[3],
-                                                        pairNum))
-        if valueParseArgs2[0] or valueParseArgs2[1] or valueParseArgs2[2] or valueParseArgs2[3]:
-            lessons.append(valueParser(valueParseArgs2[0],
-                                                        valueParseArgs2[1],
-                                                        valueParseArgs2[2],
-                                                        valueParseArgs2[3],
-                                                        pairNum))
-=======
                 if teacher_List:
                     if i < len(teacher_List):
                         valueParseArgs[2] = teacher_List[i]
@@ -96,7 +52,6 @@ def valueHandler(sheet, locCell, pairNum):
                         valueParseArgs[2] = teacher_List[i - 1]
                     else:
                         valueParseArgs[2] = teacher_List[len(teacher_List) - 1]
->>>>>>> TEST
 
                 if room_List:
                     if i < len(room_List):

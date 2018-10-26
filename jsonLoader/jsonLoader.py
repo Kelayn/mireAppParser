@@ -19,3 +19,5 @@ def uploadJson():
             dict[file[:10]] = url
     with open("C:\\Users\\araka\PycharmProjects\mireAppParser\Test\_json\JSONDICT.json", "w") as jD:
         json.dump(dict, jD, ensure_ascii=False)
+
+
